@@ -50,7 +50,7 @@ def DPTrain(images, teacher, student, criterion_s, lr_gamma, clipping='auto', c=
                 s_g = torch.clamp(s_g, min=-1*c, max=c)
         else:
             with torch.no_grad():
-                norm = torch.max(s_g) ** 2
+                norm = (torch.max(s_g)**2)**(0.5)
                 s_g = s_g / (norm + e)
         with torch.no_grad():
             s_ = sum(s_g)/batch_size
