@@ -11,7 +11,7 @@ def DPTrain(images, teacher, student, criterion_s, lr_gamma, clipping='auto', c=
     :param lr_gamma: learning rate
     :param clipping: clipping or normalizing
     :param c: clipping bound
-    :param e: a positive  stability constant (0.001 in our case)
+    :param e: a positive stability constant (0.001 in our case)
     :param sigma: parameter of Gaussian noise
     :param batch_size: batch size
     :param multiT: multi teachers or not
